@@ -1,10 +1,10 @@
 ﻿//==================================================
 // Copyright (c) Coalition Of Good-Hearted Engineers
-// Free To Use Comfort and Peace
+// Free To Use To Find Comfort and Peace
 //==================================================
 
-using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 #nullable disable
 

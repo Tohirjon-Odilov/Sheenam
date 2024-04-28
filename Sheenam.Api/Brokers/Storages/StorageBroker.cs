@@ -6,8 +6,6 @@
 using EFxceptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Sheenam.Api.Models.Foundations.Guest;
-using System.Threading.Tasks;
 
 namespace Sheenam.Api.Brokers.Storages
 {
@@ -23,7 +21,7 @@ namespace Sheenam.Api.Brokers.Storages
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = 
+            string connectionString =
                 this.configuration.GetConnectionString(name: "DefaultConnection");
 
             optionsBuilder.UseSqlServer(connectionString);
