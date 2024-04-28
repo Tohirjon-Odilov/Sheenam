@@ -1,6 +1,6 @@
 ﻿//==================================================
 // Copyright (c) Coalition Of Good-Hearted Engineers
-// Free To Use Comfort and Peace
+// Free To Use To Find Comfort and Peace
 //==================================================
 
 using Microsoft.EntityFrameworkCore;
@@ -16,10 +16,10 @@ namespace Sheenam.Api.Brokers.Storages
 
         public async ValueTask<Guest> InsertGuestAsync(Guest guest)
         {
-            using StorageBroker broker = 
+            using StorageBroker broker =
                 new StorageBroker(this.configuration);
 
-            EntityEntry<Guest> guestEntityEntiry = 
+            EntityEntry<Guest> guestEntityEntiry =
                 await broker.Guests.AddAsync(guest);
 
             await broker.SaveChangesAsync();
