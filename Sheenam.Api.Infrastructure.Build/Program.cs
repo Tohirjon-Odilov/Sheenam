@@ -31,7 +31,7 @@ var githubPipline = new GithubPipeline
               "build",
               new Job
               {
-                  RunsOn = BuildMachines.WindowsLatest,
+                  RunsOn = BuildMachines.Windows2022,
 
                   Steps = new List<GithubTask>
                   {
@@ -46,7 +46,7 @@ var githubPipline = new GithubPipeline
 
                           TargetDotNetVersion = new TargetDotNetVersion
                           {
-                              DotNetVersion = "8.0.x",
+                              DotNetVersion = "6.0.100-rc.1.21463.6",
                               IncludePrerelease = true
                           }
                       },
