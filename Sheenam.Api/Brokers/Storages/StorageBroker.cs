@@ -6,10 +6,12 @@
 using EFxceptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Sheenam.Api.Models.Foundations.Guest;
+using System.Threading.Tasks;
 
 namespace Sheenam.Api.Brokers.Storages
 {
-    public partial class StorageBroker : EFxceptionsContext
+    public partial class StorageBroker : EFxceptionsContext, IStorageBroker
     {
         private readonly IConfiguration configuration;
 
