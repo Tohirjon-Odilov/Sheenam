@@ -22,6 +22,7 @@ namespace Sheenam.Api
 
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
+            Console.WriteLine("Salom");
            return Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
