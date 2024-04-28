@@ -15,12 +15,12 @@ var githubPipline = new GithubPipeline
     {
         PullRequest = new PullRequestEvent
         {
-            Branches = new string[] {"master"}
+            Branches = new string[] {"main"}
         },
 
         Push = new PushEvent
         {
-            Branches = new string[] {"master"}
+            Branches = new string[] {"main"}
         },
 
     },
@@ -31,7 +31,7 @@ var githubPipline = new GithubPipeline
               "build",
               new Job
               {
-                  RunsOn = BuildMachines.Windows2022,
+                  RunsOn = BuildMachines.WindowsLatest,
 
                   Steps = new List<GithubTask>
                   {
@@ -46,7 +46,7 @@ var githubPipline = new GithubPipeline
 
                           TargetDotNetVersion = new TargetDotNetVersion
                           {
-                              DotNetVersion = "6.0.100-rc.1.21463.6",
+                              DotNetVersion = "8.0.x",
                               IncludePrerelease = true
                           }
                       },
