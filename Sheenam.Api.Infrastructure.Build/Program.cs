@@ -73,6 +73,17 @@ var githubPipline = new GithubPipeline
 
 var client = new ADotNetClient();
 
-client.SerializeAndWriteToFile(
+
+string buildScriptPath = "../../../../.github/workflows/dotnet.yml";
+string directoryPath = Path.GetDirectoryName(buildScriptPath)!;
+
+if (!Directory.Exists(directoryPath))
+{
+    Directory.CreateDirectory(directoryPath);
+}
+
+client.SerializeAndWriteToFile
+(
     adoPipeline: githubPipline,
-    path: "../../../../.github/workflows/dotnet.yml");
+    path: buildScriptPath
+);
